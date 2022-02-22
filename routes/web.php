@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,7 @@ Route::get('/about', function () {
         echo "This is Article Pages with ID : ".$id;
         });
     
+//practicum 2
+Route::get('/', [PageController::class,'index']);
+Route::get('/about', [PageController::class,'about']);
+Route::get('/articles/{id}', [PageController::class,'articles']);
