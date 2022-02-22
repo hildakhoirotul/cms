@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', function () {
+    echo "Hi! Welcome";
+    });
+
+Route::get('/about', function () {
+    echo "2041720161 <br>";
+    echo "Hilda Khoirotul Hidayah <br>";
+    echo "TI-2I";
+    });
+
+    Route::get('/article/{id}', function ($id) {
+        echo "This is Article Pages with ID : ".$id;
+        });
+    
