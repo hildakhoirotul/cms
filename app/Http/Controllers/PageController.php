@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function index(){
-        return 'Hi! Welcome To Laravel';
+        echo 'Hi! Welcome To Laravel';
     }
 
     public function about(){
