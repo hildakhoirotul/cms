@@ -16,13 +16,9 @@ use App\Http\Controllers\ArticleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//practicum 1
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/', function () {
-    echo "Hi! Welcome";
+    echo "Hi! Welcome to Laravel";
     });
 
 Route::get('/about', function () {
@@ -39,3 +35,15 @@ Route::get('/about', function () {
 Route::get('/', [HomeController::class,'index']);
 Route::get('/about', [AboutController::class,'about']);
 Route::get('/articles/{id}', [ArticleController::class,'articles']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Jobsheet 3
+Route::get('/', function (){
+    return view ('index');
+    });
