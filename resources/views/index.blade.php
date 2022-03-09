@@ -1,6 +1,7 @@
 @extends ('layouts.indexmaster')
 
 @section ('contents')
+@foreach ($menu as $post)
 <!--============ Slider ============-->
 
 
@@ -59,7 +60,7 @@
                     <div class="item">
                           <img src="assets/images/thumb1.png" width="226" height="225" alt="sliderimg" class="wow flipInX"
                            data-wow-delay=".8s"> 
-                          <h3>Pasta Capellini</h3>
+                          <h3>{{$post->name}}</h3>
                       </div> <!-- end of item-->
                       
                    <div class="item2">
@@ -174,5 +175,6 @@
     </div> 
     <!--contactus class-->
 </div> <!-- end of contact wrapper-->
+@endforeach
 @endsection
 

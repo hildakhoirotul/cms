@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController; 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PastaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Jobsheet 3
-Route::get('/', function (){
-    return view ('index');
-    });
+//Route::get('/', function (){
+//    return view ('index');
+ //   });
+
+
+//Jobsheet 4
+Route::get('/', [PastaController::class,'index']);
