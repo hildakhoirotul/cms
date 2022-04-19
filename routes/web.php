@@ -58,3 +58,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 */
 //Jobsheet 10
 Route::resource('articles', ArticleController::class);
+Route::get('/article/print_pdf', [ArticleController::class,'print_pdf'])->name('print_pdf');
